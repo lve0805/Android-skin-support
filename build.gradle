@@ -2,14 +2,24 @@
 
 buildscript {
     repositories {
-        jcenter()
         maven {
-            url 'https://maven.google.com/'
-            name 'Google'
+            url "https://repo.gradle.org/gradle/libs-releases"
+        }
+        maven {
+            url "https://maven.google.com"
+        }
+        maven {
+            url "https://releases.jfrog.io/artifactory/oss-releases"
+        }
+        maven {
+            url "https://groovy.jfrog.io/artifactory/libs-release"
+        }
+        maven {
+            url "https://plugins.gradle.org/m2"
         }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.2.0'
+        classpath 'com.android.tools.build:gradle:3.1.1'
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.2'
         classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
         // NOTE: Do not place your application dependencies here; they belong
@@ -19,10 +29,20 @@ buildscript {
 
 allprojects {
     repositories {
-        jcenter()
         maven {
-            url 'https://maven.google.com/'
-            name 'Google'
+            url "https://repo.gradle.org/gradle/libs-releases"
+        }
+        maven {
+            url "https://maven.google.com"
+        }
+        maven {
+            url "https://releases.jfrog.io/artifactory/oss-releases"
+        }
+        maven {
+            url "https://groovy.jfrog.io/artifactory/libs-release"
+        }
+        maven {
+            url "https://plugins.gradle.org/m2"
         }
     }
 }

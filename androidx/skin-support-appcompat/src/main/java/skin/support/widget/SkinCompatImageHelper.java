@@ -32,10 +32,6 @@ public class SkinCompatImageHelper extends SkinCompatHelper {
             a = mView.getContext().obtainStyledAttributes(attrs, R.styleable.SkinCompatImageView, defStyleAttr, 0);
             mSrcResId = a.getResourceId(R.styleable.SkinCompatImageView_android_src, INVALID_ID);
             mSrcCompatResId = a.getResourceId(R.styleable.SkinCompatImageView_srcCompat, INVALID_ID);
-            mSrcTintResId = a.getResourceId(R.styleable.SkinCompatImageView_tint, INVALID_ID);
-            if (mSrcTintResId == INVALID_ID) {
-                mSrcTintResId = a.getResourceId(R.styleable.SkinCompatImageView_android_tint, INVALID_ID);
-            }
         } finally {
             if (a != null) {
                 a.recycle();

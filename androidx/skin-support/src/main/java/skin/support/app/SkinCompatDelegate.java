@@ -62,7 +62,8 @@ public class SkinCompatDelegate implements LayoutInflater.Factory2 {
 
         List<SkinWrapper> wrapperList = SkinCompatManager.getInstance().getWrappers();
         for (SkinWrapper wrapper : wrapperList) {
-            Context wrappedContext = wrapper.wrapContext(mContext, parent, attrs);
+            // fix: 创建外部View时,若传入mContext则会因为Resource信息对不上导致崩溃
+            Context wrappedContext = wrapper.wrapContext(context, parent, attrs);
             if (wrappedContext != null) {
                 context = wrappedContext;
             }
